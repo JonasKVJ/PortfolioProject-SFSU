@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Current / Student Portfolio</title>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="custombox.min.css">-->
+        <link rel="stylesheet" type="text/css" href="site.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#hide").click(function () {
+                    $("#p1").hide();
+                });
+                $("#show").click(function () {
+                    $("#p1").show();
+                });
+            });
+
+            /*--Custombox Plugin [WIP]--     
+             $(function () {
+             $('#p2').on('click', function (e) {
+             Custombox.open({
+             target: 'demo/xhr/ajax.html',
+             effect: 'fadein'
+             });
+             e.preventDefault();
+             });
+             });
+             */
+        </script>
+        
+        <style>
+            #Demonstrations {
+                text-decoration: underline;
+            }           
+        </style>
+        
+    </head>
+    <body>
+        <!--    PHP Form input and Security [WIP]
+        <?php
+        $nameErr = $emailErr = "";
+        $name = $email = "";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        {
+        if (empty($_POST["name"])) 
+        {
+        $nameErr = "Name is required";
+        } 
+        else 
+        {
+        $name = test_input($_POST["name"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
+        {
+        $nameErr = "Only letters and white space allowed"; 
+        }
+        }
+
+        if (empty($_POST["email"])) 
+        {
+        $emailErr = "Email is required";
+        } 
+        else 
+        {
+        $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        {
+        $emailErr = "Invalid email format";
+        }
+        }
+        }
+        ?>-->
+
+
+        <!--Webpage design-->
+        <div class="page-container">
+
+            <!-- top navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-br"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Student Portfolio - CSC 412 - San Francisco State University</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row row-offcanvas row-offcanvas-left">
+
+                    <!-- sidebar -->
+                    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                        <ul class="nav">
+                            <li class="active"><a href="home.html">Home</a></li>
+                            <li><a href="current.html">Current</a></li>
+                            <li><a href="demonstrations.html">Demonstrations</a></li>
+                            <li><a href="about.html">About</a></li>              
+                        </ul>
+                    </div>
+
+                    <!-- main area -->
+                    <div class="col-xs-12 col-sm-9">
+                        <h1>Current</h1>
+                        
+                        <p>During the Advanced Software Lab course at San Francisco State University, I have become familiar
+                            with several technologies.
+                            The following is a current summary of the web-design technologies I have had experience with: </p>
+                        <ul class="list-group">
+                            <li class="list-group-item">HTML - Basic Web Design</li>
+                            <li class="list-group-item">Bootstrap - Advanced Web Design</li>
+                            <li class="list-group-item">JavaScript - Changing background color</li>
+                            <li class="list-group-item">JQuery - Button Hide/Show response</li>
+                            <li class="list-group-item">PHP - Databases with SQL, $_POST Confirmation</li>
+                            <li class="list-group-item">SQL - Creating and inserting into a table with PHP</li>
+                            <li class="list-group-item">Databases - Printing from and inserting into a DB with PHP and SQL</li>
+                            <li class="list-group-item">Python - Streaming from Twitter using Tweepy API</li>
+                            <li class="list-group-item">VCS - More specifically SVN and how to collaborate using it</li>
+                        </ul>
+
+                        <p>More specifically, I gained knowledge of basic HTML involving any kind of formatting of text, 
+                            insertion of forms and the importance of using CSS to modify the attributes of the code to
+                            make the work-process less time-consuming. I know of bootstrap in relation to more advanced 
+                            web-design including, but not limited to, how to design a site that is responsive to mobile 
+                            devices. This site uses the default settings for mobile devices, meaning that the width of this
+                            site adapts to the screen-width of the device it is viewed on. The list-group above is also
+                            made with bootstrap in order to benefit from the design the design-theme that bootstrap adds.</p>  
+                            
+                        <p>Javascript was used in the Demonstrations section so that on_click of the change background event
+                            calls a function that changes the background color of the page. 
+                            jQuery was used for the hide-show buttons in the Demonstrations sections to tie the on_click 
+                            event of the button together with the ready() function from the jQuery library that hides/shows 
+                            a paragraph with a specific id. The id is selected with a Javascript selector</p>  
+                        
+                        <p>PHP is used to respond to the clicking of the submit button with the superglobal _$POST variable 
+                            and was also used for a lab exercise involving databases. For security reasons, the result
+                            of the work has not been posted. The PHP code in mention simply allows any user to post a quote 
+                            with an author and the quote and author will then be inserted automatically into a table in a 
+                            database using SQL. If the table does not exist, it is created.</p>
+                            
+                        <p>Another PHP-project that has also been omitted from this site for the same security concerns as
+                            above allows the printing of a table in a database onto a page. 
+                            VCS is not displayed on this site, but I have experience with the VCS called SVN and how to upload
+                            and merge files without overwriting changes that another user has made. The files were created with
+                            VIM in a UNIX shell set up to communicate with the class server through the Secure Shell Protocol.</p>  
+                            
+                        <p>I also used Tweepy API to livestream any twitter feed with a given # in real-time by using Python 
+                            in VIM on an Amazon Web Services Server, because that server had the correct packages installed
+                            to run the API.
+                            For concrete examples of the above-mentioned, see the Demonstrations section.</p>
+
+                                            
+                    </div><!-- /.col-xs-12 main -->
+                </div><!--/.row-->
+            </div><!--/.container-->
+        </div><!--/.page-container-->
+
+    <script>
+        function changeBgColor()
+        {
+            document.body.style.backgroundColor = "#EFEDDF";
+        }
+    </script>
+</body>
+</html>

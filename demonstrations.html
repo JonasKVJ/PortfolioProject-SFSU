@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Current / Student Portfolio</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="custombox.min.css">-->
+        <link rel="stylesheet" type="text/css" href="site.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>        
+    </head>
+    <body>
+        <!--    PHP Form input and Security [WIP]
+        <?php
+        $nameErr = $emailErr = "";
+        $name = $email = "";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        {
+        if (empty($_POST["name"])) 
+        {
+        $nameErr = "Name is required";
+        } 
+        else 
+        {
+        $name = test_input($_POST["name"]);
+        // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$name)) 
+        {
+        $nameErr = "Only letters and white space allowed"; 
+        }
+        }
+
+        if (empty($_POST["email"])) 
+        {
+        $emailErr = "Email is required";
+        } 
+        else 
+        {
+        $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        {
+        $emailErr = "Invalid email format";
+        }
+        }
+        }
+        ?>-->
+
+
+        <!--Webpage design-->
+        <div class="page-container">
+
+            <!-- top navbar -->
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                            <span class="icon-bar"></span>
+                            <span class="icon-br"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Student Portfolio - CSC 412 - San Francisco State University</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row row-offcanvas row-offcanvas-left">
+
+                    <!-- sidebar -->
+                    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                        <ul class="nav">
+                            <li class="active"><a href="home.html">Home</a></li>
+                            <li><a href="current.html">Current</a></li>
+                            <li><a href="#">Demonstrations</a></li>
+                            <li><a href="about.html">About</a></li>              
+                        </ul>
+                    </div>
+
+                    <!-- main area -->
+                    <div class="col-xs-12 col-sm-9">
+                        <h1>Demonstrations</h1>                    
+                        <h4>Javascript - Button and Function Call</h4>
+                        <p>
+                        <button type="button" onclick="changeBgColor()">
+                            Change background color
+                        </button>
+                        <p/>
+                        <br/>
+                        
+                        <h4>Javascript/jQuery - Hide & Show Button</h4>                       
+                        <button id="hide">Hide</button>
+                        <button id="show">Show</button>
+                        <p id="p1">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a velit odio. Nulla facilisi. Donec fermentum sagittis libero eget vehicula. Nulla facilisi. Fusce accumsan volutpat posuere. Vestibulum dapibus justo eu augue porttitor, quis ullamcorper metus mollis. Praesent nec ligula vel ex rutrum tempor in efficitur est. Duis a aliquam augue, gravida convallis dolor. Praesent hendrerit enim ante, euismod interdum nunc bibendum eget. Proin eu posuere est, nec posuere ipsum. Pellentesque scelerisque, mi scelerisque fringilla cursus, sapien nulla ullamcorper mi, ut aliquet orci mauris quis arcu.
+                        </p>
+                        
+                        <br/>
+
+                        <form action="confirmation.php" method="post">
+                        <fieldset>
+                            <legend><h4>PHP - Form and Confirmation</h4></legend>
+                            Name:<br>  
+                            <input type="text" name="name"><br>
+                            E-mail:<br> 
+                            <input type="text" name="email"><br>
+                            <br>
+                            <input type="submit">
+                        </fieldset>
+                        </form>
+
+                    </div><!-- /.col-xs-12 main -->
+                </div><!--/.row-->
+            </div><!--/.container-->
+        </div><!--/.page-container-->
+
+    <script>
+        function changeBgColor()
+        {
+            document.body.style.backgroundColor = "#EFEDDF";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Generic page for csc412
+        </title>
+        <meta http-equiv="Content-Type"
+              content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="custombox.min.css">
+        <link rel="stylesheet" type="text/css" href="site.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="custombox.min.js"></script>
+        <script src="src/jquery.custombox.js"></script>
+        <script>
+            $(function () {
+                $('#custombox').on('click', function (e) {
+                    Custombox.open({
+                        target: 'http://thecity.sfsu.edu/~jonaskvj/about.html',
+                        effect: 'fadein'
+                    });
+                    e.preventDefault();
+                });
+            });
+        </script>
+        <script>
+            $(function () {
+                $('#custombox').on('click', function (e) {
+                    $.fn.custombox(this);
+                    e.preventDefault();
+                });
+            });
+        </script>
+        <style>
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 5px;
+                overflow: hidden;
+            }
+
+            li {
+                float: left;
+            }
+
+            a:link, a:visited {
+                display: block;
+                width: 165px;
+                font-weight: bold;
+                color: #FFFFFF;
+                background-color: #98bf21;
+                text-align: center;
+                padding: 4px;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            a:hover, a:active {
+                background-color: #7A991A;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="current.html">CURRENT</a></li>
+        </ul>
+        <h1>Hello world!</h1>
+        This is the page of jonaskvj
+        Current lab is lab 1 and todays date is: 02-03-2015
+        This website is written by a student at SFSU and this site is a practice site for CSC 412 during the Spring 2015 semester.
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a velit odio. Nulla facilisi. Donec fermentum sagittis libero eget vehicula. Nulla facilisi. Fusce accumsan volutpat posuere. Vestibulum dapibus justo eu augue porttitor, quis ullamcorper metus mollis. Praesent nec ligula vel ex rutrum tempor in efficitur est. Duis a aliquam augue, gravida convallis dolor. Praesent hendrerit enim ante, euismod interdum nunc bibendum eget. Proin eu posuere est, nec posuere ipsum. Pellentesque scelerisque, mi scelerisque fringilla cursus, sapien nulla ullamcorper mi, ut aliquet orci mauris quis arcu.
+            </p>
+
+            <p>
+                Duis placerat aliquet convallis. Suspendisse ultrices lacus congue mauris ullamcorper, at auctor velit aliquam. Vestibulum ex ex, pellentesque sit amet euismod vitae, tristique vel purus. Donec ante tellus, aliquam a rhoncus at, tempus eleifend lorem. Nam consectetur metus nec fringilla finibus. Cras pharetra lobortis felis feugiat egestas. Cras vitae urna laoreet, rhoncus libero sit amet, feugiat erat. Nunc tempus ligula metus, ac eleifend leo interdum scelerisque. Donec a lorem maximus, efficitur dolor posuere, tincidunt neque. In tempor nunc eu congue hendrerit.
+            </p>
+
+            <p>
+                Donec sit amet elementum metus, at elementum orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In dignissim laoreet dolor, a varius risus molestie vitae. Vivamus condimentum pretium efficitur. Pellentesque eu pellentesque risus, nec mollis mi. Maecenas purus nisi, luctus vel tortor id, pharetra venenatis elit. Proin urna ipsum, ornare vel nisl ut, efficitur malesuada metus. Praesent volutpat sed tellus ut volutpat. Praesent ut orci ac risus semper efficitur a eget augue.
+            </p>
+            <br/>
+            <button id="custombox">Open custombox</button>
+        </div>
+    </body>
+</html>
